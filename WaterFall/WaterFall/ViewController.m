@@ -9,10 +9,21 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UICollectionView *collectionView;
 @end
 
 @implementation ViewController
+
+- (UICollectionView *)collectionView
+{
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(50, 50);
+    if (_collectionView == nil) {
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
+
+    }
+    return _collectionView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
