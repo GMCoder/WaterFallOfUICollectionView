@@ -20,7 +20,7 @@
     layout.itemSize = CGSizeMake(50, 50);
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
-
+        [_collectionView registerClass:NSClassFromString(@"UICollectionViewCell") forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;
 }
