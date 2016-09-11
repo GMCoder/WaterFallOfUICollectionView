@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomCell.h"
 
 @interface ViewController ()<UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -25,7 +26,7 @@
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
 //        _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        [_collectionView registerClass:NSClassFromString(@"UICollectionViewCell") forCellWithReuseIdentifier:@"cell"];
+        [_collectionView registerClass:NSClassFromString(@"CustomCell") forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;
 }
@@ -37,7 +38,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor yellowColor];
     return cell;
 }

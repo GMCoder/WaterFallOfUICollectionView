@@ -13,6 +13,7 @@
 		23A7E2C81D805E5900449D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A7E2C61D805E5900449D21 /* Main.storyboard */; };
 		23A7E2CA1D805E5900449D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A7E2C91D805E5900449D21 /* Assets.xcassets */; };
 		23A7E2CD1D805E5900449D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A7E2CB1D805E5900449D21 /* LaunchScreen.storyboard */; };
+		23ECB8471D859C77001626EE /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23ECB8461D859C77001626EE /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		23A7E2C91D805E5900449D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A7E2CC1D805E5900449D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A7E2CE1D805E5900449D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23ECB8451D859C77001626EE /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		23ECB8461D859C77001626EE /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				23A7E2C11D805E5900449D21 /* AppDelegate.m */,
 				23A7E2C31D805E5900449D21 /* ViewController.h */,
 				23A7E2C41D805E5900449D21 /* ViewController.m */,
+				23ECB8451D859C77001626EE /* CustomCell.h */,
+				23ECB8461D859C77001626EE /* CustomCell.m */,
 				23A7E2C61D805E5900449D21 /* Main.storyboard */,
 				23A7E2C91D805E5900449D21 /* Assets.xcassets */,
 				23A7E2CB1D805E5900449D21 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			files = (
 				23A7E2C51D805E5900449D21 /* ViewController.m in Sources */,
 				23A7E2C21D805E5900449D21 /* AppDelegate.m in Sources */,
+				23ECB8471D859C77001626EE /* CustomCell.m in Sources */,
 				23A7E2BF1D805E5900449D21 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +305,7 @@
 				23A7E2D31D805E5900449D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
