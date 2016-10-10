@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CustomCell.h"
 
-@interface ViewController ()<UICollectionViewDataSource>
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @end
 
@@ -24,7 +24,7 @@
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
-//        _collectionView.delegate = self;
+        _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:NSClassFromString(@"CustomCell") forCellWithReuseIdentifier:@"cell"];
     }
