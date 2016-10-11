@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CustomCell.h"
+#import "MyLayout.h"
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -17,10 +18,11 @@
 
 - (UICollectionView *)collectionView
 {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(120, 200);
-    layout.minimumInteritemSpacing = 1;
-    layout.minimumLineSpacing = 10;
+    MyLayout *layout = [[MyLayout alloc] init];
+    layout.itemCount = 30;
+    //layout.itemSize = CGSizeMake(120, 200);
+    //layout.minimumInteritemSpacing = 1;
+    //layout.minimumLineSpacing = 10;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
@@ -29,6 +31,11 @@
         [_collectionView registerClass:NSClassFromString(@"CustomCell") forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
