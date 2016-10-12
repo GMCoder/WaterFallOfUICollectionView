@@ -20,9 +20,8 @@
 {
     MyLayout *layout = [[MyLayout alloc] init];
     layout.itemCount = 30;
-    //layout.itemSize = CGSizeMake(120, 200);
-    //layout.minimumInteritemSpacing = 1;
-    //layout.minimumLineSpacing = 10;
+    layout.minimumInteritemSpacing = 10;
+    layout.minimumLineSpacing = 10;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
